@@ -6,20 +6,20 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         int N = sc.nextInt(); // 도시
-        int[] len = new int[N-1]; // 도시 사이의 거리
-        int[] cost = new int[N]; // 기름 값
+        long[] len = new long[N-1]; // 도시 사이의 거리
+        long[] cost = new long[N]; // 기름 값
 
         for(int i = 0; i<N-1; i++){
-            len[i] = sc.nextInt();
+            len[i] = sc.nextLong();
         }
 
         for(int i = 0; i<N; i++){
-            cost[i] = sc.nextInt();
+            cost[i] = sc.nextLong();
         }
 
-        int answer = 0; // 정답
+        long answer = 0; // 정답
 
-        int min = cost[0]; //일단 맨 처음 가격
+        long min = cost[0]; //일단 맨 처음 가격
 
         for(int i = 0; i<N-1; i++){
             if(cost[i] < min) {
