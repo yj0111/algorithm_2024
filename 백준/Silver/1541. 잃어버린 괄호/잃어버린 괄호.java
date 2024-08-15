@@ -7,12 +7,10 @@ public class Main {
 
         String input = sc.next();
         String[] str = input.split("[-]"); // - 이나 [-] 이나 똑같음!
-//        System.out.println(Arrays.toString(str));
         int answer = 0;
 
         for(int i = 0; i<str.length; i++){
             String[] temp = str[i].split("[+]");
-//            System.out.println(Arrays.toString(temp));
             if(i == 0){
                 answer += cal(temp);
             }else {
